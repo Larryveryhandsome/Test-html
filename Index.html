@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracle 商業模式總覽</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f5f5f5; }
+        h1, h2 { color: #333; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 15px; }
+        a { text-decoration: none; color: #007bff; font-weight: bold; cursor: pointer; }
+        main { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        ul { padding-left: 20px; }
+        .section { display: none; }
+        .active { display: block; }
+    </style>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tracle 垃可 商業模式與系統架構總覽</h1>
+        <nav>
+            <ul>
+                <li><a onclick="showSection('business')">商業模式分析</a></li>
+                <li><a onclick="showSection('system')">系統架構 & 服務流程</a></li>
+                <li><a onclick="showSection('flow')">核心流程圖</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 商業模式分析 -->
+        <div id="business" class="section active">
+            <h2>🔹 主要收入來源</h2>
+            <ul>
+                <li>📦 訂閱收費 - 用戶按月/半年/年付費，每週 1-5 次收垃圾</li>
+                <li>🏢 B2B 方案 - 企業、社區、包租代管方案，提供批量優惠</li>
+                <li>🔄 一次性清運 - 搬家、裝潢後大量垃圾清運，按次報價</li>
+                <li>🛍️ 商城銷售 - 綠界商城販售垃圾袋、環保用品</li>
+                <li>🤝 異業合作 - 房產、租屋、物業管理、社區聯盟推廣</li>
+                <li>🎁 會員推薦 - 用戶邀請新客戶，獎勵金或折扣</li>
+            </ul>
+            
+            <h2>🔹 定價策略</h2>
+            <ul>
+                <li>小資方案 - NT$380/月，適用 1-2 人，30 公升/次</li>
+                <li>家庭方案 - NT$560/月，適用 3-5 人，60 公升/次</li>
+                <li>商務方案 - NT$800/月，適用小型辦公，76 公升/次</li>
+                <li>企業方案 - NT$1,080/月，適用大型辦公，152 公升/次</li>
+            </ul>
+
+            <h2>🔹 行銷策略</h2>
+            <ul>
+                <li>📢 數位廣告 - Facebook & Google 廣告</li>
+                <li>📰 公關媒體 - 電視、新聞專訪，提高品牌信任</li>
+                <li>📱 社群經營 - LINE 官方帳號、Instagram、YouTube 推廣</li>
+                <li>🎟️ 推薦機制 - 用戶邀請新客送折扣</li>
+                <li>💼 異業合作 - 房東、租屋平台、物業管理公司聯盟</li>
+                <li>📝 SEO 內容 - 經營部落格，教育市場</li>
+            </ul>
+        </div>
+
+        <!-- 系統架構 & 服務流程 -->
+        <div id="system" class="section">
+            <h2>🔹 服務流程</h2>
+            <ul>
+                <li>📍 Step 1 - 用戶註冊 & 訂閱方案</li>
+                <li>📍 Step 2 - 設定收垃圾頻率、地點、方式</li>
+                <li>📍 Step 3 - 當日垃圾收取提醒</li>
+                <li>📍 Step 4 - 收取員上門取件 & 拍照確認</li>
+                <li>📍 Step 5 - 服務完成，發送通知</li>
+                <li>📍 Step 6 - 用戶可評價 & 調整下次收取時間</li>
+            </ul>
+        </div>
+
+        <!-- 核心流程圖 -->
+        <div id="flow" class="section">
+            <h2>📌 視覺化總覽：商業模式系統架構</h2>
+
+            <h3>📊 核心流程圖</h3>
+            <p>[📢 廣告投放] → [🌐 用戶註冊 & 訂閱] → [📦 設定垃圾收取時間]</p>
+            <p>→ [🚛 收取員派遣] → [📷 照片確認] → [📬 服務完成通知]</p>
+            <p>→ [📝 評價 & 續訂] → [🔄 會員推薦]</p>
+
+            <h3>📊 技術架構</h3>
+            <p>[📱 前端 Web & RWD] → [💳 綠界支付] → [🛠 智慧排程派工]</p>
+            <p>→ [📡 收取員 App] → [📊 數據分析 & AI 優化]</p>
+        </div>
+    </main>
+</body>
+</html>
